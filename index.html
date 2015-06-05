@@ -4,11 +4,25 @@
     <meta charset="utf-8">
     <title> Chart Requests </title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="graph"></div>
+
+    <div>
+      <form>
+        <input type="number" name="amount" value="Requests"> <br>
+        <input type="date" value="Date"> <br>
+        <input type="radio" name="human" value="Human"> Human <br>
+        <input type="radio" name="good_bot" value="Good Bot" /> Good Bot <br>
+        <input type="radio" name="bad_bot" value="Bad Bot" /> Bad Bot <br>
+        <input type="radio" name="whitelist" value="Whitelist" /> Whitelist <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="lib/chart.js"></script>
+    <script src="lib/form.js"></script>
   </body>
 </html>
