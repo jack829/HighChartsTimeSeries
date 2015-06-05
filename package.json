@@ -1,0 +1,8 @@
+{
+  "name": "Request-Charts",
+  "version": "0.0.0",
+  "author": "Jack Peterson",
+  "dependencies": {
+    "coffee-script": "^1.9.3"
+  }
+}
