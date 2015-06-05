@@ -2,12 +2,8 @@ loadJSON = (callback) ->
   xobj = new XMLHttpRequest();
   xobj.overrideMimeType "application/json"
   xobj.open 'Get', 'domain_reqs.json', true
-  # console.log "xobj #{xobj.readyState}"
   xobj.onreadystatechange = ->
-    # console.log "readystate change #{xobj.readyState}"
-    # console.log "status #{xobj.status}"
     if (xobj.readyState == 4 and xobj.status == 200)
-      # console.log "xobj response #{xobj.responseType}"
       callback xobj.responseText
     return
   xobj.send null
@@ -18,7 +14,6 @@ loadJSON (response) ->
   reqsArr = jsonData.categorized_domain_requests
   distributeData reqsArr
   return
-  # loadChart jsonObjs
 
 distributeData = (data) ->
   console.log data.length
@@ -42,7 +37,7 @@ distributeData = (data) ->
 loadChart = (summary_dates, human_total, good_bot_total, bad_bot_total, whitelist_total) -> 
   $("#graph").highcharts({
     chart:    
-      type: "column"
+      type: "line"
     title: 
       text: "Request Chart"
     xAxis: 
@@ -52,6 +47,10 @@ loadChart = (summary_dates, human_total, good_bot_total, bad_bot_total, whitelis
       min: 0
       title:
         text: "Number of Requests"
+    plotOptions: 
+      line:
+        dataLabels:
+          enabled: false
     series: [
       {
         name: "Human Requests"
