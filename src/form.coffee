@@ -1,8 +1,7 @@
-window.app = 
+window.ChartForm = 
   init: ->
-    console.log "initing"
-    app.form = document.getElementById 'new_point';
-    app.form.addEventListener "submit", app.updateChart
+    console.log "initialize form"
+    document.getElementById('new_point').addEventListener("submit", ChartForm.updateChart)
     return
   
   updateChart: (event) ->
@@ -12,6 +11,7 @@ window.app =
     radios = document.getElementsByName("req_type")
     selected = button for button in radios when button.checked
     selected_type = selected.value
+    Chart.updateChart num_reqs, date, selected_type
     return
 
 
