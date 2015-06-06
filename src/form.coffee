@@ -11,7 +11,7 @@ window.ChartForm =
     radios = document.getElementsByName("req_type")
     selected = button for button in radios when button.checked
     selected_type = selected.value
-    Chart.updateChart num_reqs, date, selected_type
+    Data.updateData num_reqs, date, selected_type
     return
 
 
