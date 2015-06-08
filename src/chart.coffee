@@ -45,6 +45,7 @@ window.Chart =
         }
       ]
     })
+    
   #this method loops through the parsed data, sends each date to be converted to UTC form that works
   # best for Highcharts, then pushes the tuple of date and number of requests for each request type
   # to the corresponding arrays. Then the function calls render to actually render the graph with the

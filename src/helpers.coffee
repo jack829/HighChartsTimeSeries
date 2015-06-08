@@ -1,3 +1,4 @@
+# The data module loads the data and has the date converter
 window.Data = 
   #upon initialization, the Data module reads in all of the provided data from the json file
   init: ->

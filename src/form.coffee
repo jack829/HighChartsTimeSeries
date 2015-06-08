@@ -1,7 +1,8 @@
 # add event listener for DOM content loaded before loading the module
 window.document.addEventListener 'DOMContentLoaded', ->
     ChartForm.init()
-
+    s
+#the form module handles form submissions
 window.ChartForm = 
   init: ->
     # set an event listener on the form being submitted
@@ -24,8 +25,10 @@ window.ChartForm =
     request_type = selected.value
     # call the Chart module's update data method to plot the point
     Chart.updateData request_type, date, num_reqs
+    #clear the form
     ChartForm.form.reset()
     return
+
   # this method makes sure that the date was submitted in yyyy-mm-dd format, then passes it to the date 
   # date converter
   checkAndConvertDateInput: (date) ->
@@ -34,6 +37,7 @@ window.ChartForm =
         alert "please enter date in the format yyyy-mm-dd"
         return
     return Data.dateConverter date
+
   # this method simply checks that the value passed for requests is a number
   confirmNumber: (num) ->
     if not typeof num == 'number'
