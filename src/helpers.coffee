@@ -9,7 +9,7 @@ window.Data =
   # before executing the callback on it's responseText
   loadData: (callback) ->
     xobj = new XMLHttpRequest();
-    xobj.overrideMimeType "application/json"
+    xobj.overrideMimeType 'application/json'
     xobj.open 'Get', 'domain_reqs.json', true
     xobj.onreadystatechange = ->
       if (xobj.readyState == 4 and xobj.status == 200)

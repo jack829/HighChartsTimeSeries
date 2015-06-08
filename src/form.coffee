@@ -34,7 +34,7 @@ window.ChartForm =
   checkAndConvertDateInput: (date) ->
     date_format = /^\d{4}[-]\d{2}[-]\d{2}$/
     if not date_format.test date
-        alert "please enter date in the format yyyy-mm-dd"
+        alert 'please enter date in the format yyyy-mm-dd'
         return
     return Data.dateConverter date
 

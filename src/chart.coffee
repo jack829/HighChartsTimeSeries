@@ -45,7 +45,7 @@ window.Chart =
         }
       ]
     })
-    
+
   #this method loops through the parsed data, sends each date to be converted to UTC form that works
   # best for Highcharts, then pushes the tuple of date and number of requests for each request type
   # to the corresponding arrays. Then the function calls render to actually render the graph with the
@@ -53,11 +53,11 @@ window.Chart =
   distributeData: (data) ->
     i = 0
     while i < data.length
-      date = Data.dateConverter data[i]["summary_date"]
-      Chart.human_total.push [date, data[i]["human_total"]]
-      Chart.good_bot_total.push [date, data[i]["good_bot_total"]]
-      Chart.bad_bot_total.push [date, data[i]["bad_bot_total"]]
-      Chart.whitelist_total.push [date, data[i]["whitelist_total"]]
+      date = Data.dateConverter data[i]['summary_date']
+      Chart.human_total.push [date, data[i]['human_total']]
+      Chart.good_bot_total.push [date, data[i]['good_bot_total']]
+      Chart.bad_bot_total.push [date, data[i]['bad_bot_total']]
+      Chart.whitelist_total.push [date, data[i]['whitelist_total']]
       i++
     Chart.render()
     return
@@ -76,10 +76,10 @@ window.Chart =
 
   checkType: (type) ->
     series_num = 
-      if type == "human_total" then 0 
-      else if type == "good_bot_total" then 1 
-      else if type == "bad_bot_total" then 2
-      else if type == "whitelist_total" then 3
+      if type == 'human_total' then 0 
+      else if type == 'good_bot_total' then 1 
+      else if type == 'bad_bot_total' then 2
+      else if type == 'whitelist_total' then 3
     series_num
 
 # initiallize the module 
