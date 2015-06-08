@@ -1,12 +1,10 @@
 .container {
-  max-width: 80%;
   display: flex;
   flex-wrap: wrap;
 }
 
 #time_series_chart {
-  width: 95%;
-  margin: auto;
+  margin: 0 auto;
   spacing: auto;
   padding: 30px;
 }
