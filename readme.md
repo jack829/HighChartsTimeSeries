@@ -22,5 +22,6 @@ From the root directory:
   ```
   python -m SimpleHTTPServer
   ```
+Note: I did not set up a node.js http server in order to avoid using any tools on top of JS.
 
 Then on your browser, navigate to http://localhost:8000
