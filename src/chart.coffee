@@ -42,9 +42,6 @@ window.Chart =
         }
       ]
     })
-    chart = Chart.chart.highcharts()
-    console.log "x axis #{chart.series[0].xData}"
-    console.lo
 
   distributeData: (data) ->
     i = 0

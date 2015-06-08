@@ -1,12 +1,12 @@
 window.ChartForm = 
   init: ->
-    ChartForm.form = document.getElementById 'new_point_form'
+    ChartForm.form = document.getElementById('new_point_form').querySelector('FORM')
+    console.log "ChartForm #{ChartForm.form}"
     ChartForm.form.addEventListener 'submit', ChartForm.updateChart
     return
   
   updateChart: (event) ->
     event.preventDefault() 
-    
     num_reqs = ChartForm.confirmNumber parseInt document.getElementById('requests').value
     
     date = ChartForm.checkAndConvertDateInput document.getElementById('date').value
