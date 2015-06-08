@@ -1,5 +1,55 @@
-#graph {
-  min-width: 310px; 
-  height: 400px;
-  margin: 0;
+.container {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+#time_series_chart {
+  width: 95%;
+  margin: auto;
+  spacing: auto;
+  padding: 30px;
+}
+
+#new_point_form {
+  margin: auto;
+  max-width: 200px;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 20px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.required {
+  color: red;
+}
+
+.boxinput {
+  margin: 10px;
+}
+.categories {
+  margin: 5px;
+}
+#bot_types {
+  padding-top: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  text-align: left;
+}
+
+.button {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  background-color: #ADD8E6;
+}
+.button:hover {
+  background-color: #00FA9A;
+}
+
+

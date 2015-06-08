@@ -10,23 +10,29 @@
     <script src='lib/chart.js'></script>
     <script src='lib/form.js'></script>
   </head>
-  <body>
-    
-    <div id='time_series_chart'></div>
 
-    <div>
-      <form id='new_point_form'>
-        <input type='number' id='requests' min='0' value='Requests' required> <br>
-        <input type='date' id='date' value='yyyy-mm-dd' required> <br>
-        <div id='bot_types' required>      
-          <input type='radio' name='req_type' value='human_total'> Human <br>
-          <input type='radio' name='req_type' value='good_bot_total'> Good Bot <br>
-          <input type='radio' name='req_type' value='bad_bot_total'> Bad Bot <br>
-          <input type='radio' name='req_type' value='whitelist_total'> Whitelist <br>
-        </div>
-        <input type='submit' value='Submit'>
-      </form>
+  <body>
+    <div class="container">
+      <div id='time_series_chart'></div>
+
+      <div id='new_point_form'>
+        <form>
+          <h3> Add a new Data Point </h3>
+          <span class='categories'>Requests<span class='required'>*</span>:</span> <input class="boxinput" type='number' id='requests' min='0' value='Requests' required> <br>
+          <span class='categories'>Date<span class='required'>*</span>:</span><br><input class="boxinput" type='date' id='date' value='yyyy-mm-dd' required> <br>
+          <div id='bot_types' required>  
+            <span class='categories'>Type<span class='required'>*</span>:</span> <br> 
+            <input type='radio' name='req_type' value='human_total'> Human <br>
+            <input type='radio' name='req_type' value='good_bot_total'> Good Bot <br>
+            <input type='radio' name='req_type' value='bad_bot_total'> Bad Bot <br>
+            <input type='radio' name='req_type' value='whitelist_total'> Whitelist <br>
+          </div>
+          <input class='button' type='submit' value='Submit'>
+        </form>
+      </div>
     </div>
 
+
   </body>
+
 </html>

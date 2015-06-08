@@ -13,9 +13,9 @@ window.Chart =
         zoomType: 'y'
       title: 
         text: 'Request Chart'
+        
       xAxis: 
         type: 'datetime'
-        # categories: Chart.categories
         crosshair: true
       yAxis:
         min: 0
