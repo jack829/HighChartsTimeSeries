@@ -18,6 +18,8 @@ To compile the code to JavaScript, run:
 
 Now the Coffeescript code from the src folder is compiled to JS in the lib folder.
 
+We will use python's simple server here. If you do not have python, please download it or use an alternative simple server.
+
 From the root directory:
   ```
   python -m SimpleHTTPServer
